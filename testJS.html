@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+    <script>
+        function getVersion() {
+            window.webkit.messageHandlers.getVersion.postMessage(null);
+        }
+
+        function showVersion(versionInfo) {
+            document.getElementById("version").innerHTML = versionInfo;
+        }
+    </script>
+</head>
+<body onload="getVersion()">
+    <h1>Welcome to My App</h1>
+    <p>Version: <span id="version"></span></p>
+</body>
+</html>
